@@ -1,0 +1,30 @@
+  function dig(obj, target) {
+
+    var levelNum = target.replace(/[^0-9]/ig, ""); 
+
+    for (let index = 1; index <= levelNum; index++) {
+
+        obj = obj['level'+index];
+
+    }
+
+    console.log(obj);
+
+}
+
+
+
+var data = {
+
+  level1: {
+
+    level2: {
+
+      level3: 'some data'
+
+    }
+  }
+}
+dig(data,level1)
+dig(data,level2)
+dig(data,level3)
